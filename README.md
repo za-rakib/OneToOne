@@ -33,8 +33,6 @@ The app provides BAs with a secure login (OTP or Face Recognition) and a persona
 ## ⚙️ Setup
 
 ```bash
-git clone https://github.com/your-org/jti-one-to-one.git
-cd jti-one-to-one
 npm install
 npm start
 npm run android
