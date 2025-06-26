@@ -49,11 +49,10 @@ const styles = StyleSheet.create({
   overlay: {
     width: '90%',
     maxWidth: 400,
-    backgroundColor: 'rgba(0, 0, 0, 0.1)', // Semi-transparent overlay
+    backgroundColor: 'rgba(0, 0, 0, 0.1)',
     borderRadius: 15,
     padding: 30,
     alignItems: 'center',
-    // Optional: Add subtle border
   },
   title: {
     fontSize: 24,
@@ -72,13 +71,12 @@ const styles = StyleSheet.create({
   input: {
     width: '100%',
     height: 50,
-    backgroundColor: 'rgba(255, 255, 255, 0.1)', // Transparent white
+    backgroundColor: 'rgba(255, 255, 255, 0.1)', 
     borderRadius: 10,
     paddingHorizontal: 16,
     color: '#fff',
     marginBottom: 16,
     fontSize: 16,
-    // Optional: Add border
     borderWidth: 1,
     borderColor: 'rgba(255, 255, 255, 0.2)',
   },
@@ -90,7 +88,6 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     marginTop: 10,
-    // Optional: Add shadow effect
     shadowColor: '#000',
     shadowOffset: { width: 0, height: 2 },
     shadowOpacity: 0.3,
