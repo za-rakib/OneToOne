@@ -20,7 +20,7 @@ const Theme = ({ children }) => {
 const styles = StyleSheet.create({
   background: {
     flex: 1,
-    backgroundColor: 'red',
+    backgroundColor: '#000',
   },
 });
 
