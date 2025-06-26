@@ -1,7 +1,7 @@
 import React from 'react';
 import { ImageBackground, StatusBar, StyleSheet } from 'react-native';
 
-const backgroundImage = require('../assets/image1.jpg');
+const backgroundImage = require('../assets/images/image1.jpg')
 
 const Theme = ({ children }) => {
   return (

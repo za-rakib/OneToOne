@@ -1,6 +1,6 @@
 import { View, Text, SafeAreaView, StatusBar, StyleSheet } from 'react-native'
 import React from 'react'
-import Login from './src/components/Login'
+import Login from './src/components/features/Login'
 import Theme from './src/Theme/Theme'
 
 const App = () => {
