@@ -4,7 +4,7 @@ import React from 'react'
 const AppNavContainer = () => {
   return (
     <View>
-      <Text>AppNavContainer</Text>
+      <Text>AppNavContai</Text>
     </View>
   )
 }
