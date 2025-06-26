@@ -1,12 +1,12 @@
 import { View, Text } from 'react-native'
 import React from 'react'
 
-const AppNavContainer = () => {
+const AppNavigator = () => {
   return (
     <View>
-      <Text>AppNavContainer</Text>
+      <Text>AppNavigator</Text>
     </View>
   )
 }
 
-export default AppNavContainer
+export default AppNavigator

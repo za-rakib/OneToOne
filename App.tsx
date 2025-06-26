@@ -1,13 +1,13 @@
-import { View, Text, SafeAreaView, StatusBar, StyleSheet } from 'react-native'
+import {SafeAreaView} from 'react-native'
 import React from 'react'
-import Login from './src/components/Login'
 import Theme from './src/Theme/Theme'
+import RootNavigator from './src/navigation/RootNavigator'
 
 const App = () => {
   return (
     <Theme>
       <SafeAreaView style={{ flex: 1 }}>
-        <Login />
+        <RootNavigator/>
       </SafeAreaView>
     </Theme>
   )
