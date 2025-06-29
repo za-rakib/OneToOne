@@ -7,7 +7,6 @@ import { GestureHandlerRootView } from 'react-native-gesture-handler';
 const App = () => {
   return (
     <GestureHandlerRootView>
-
       <AuthProvider>
         <NavigationContainer>
           <RootNavigator />
