@@ -1,15 +1,19 @@
-import {SafeAreaView} from 'react-native'
-import React from 'react'
-import Theme from './src/Theme/Theme'
-import RootNavigator from './src/navigation/RootNavigator'
+import React from 'react';
+import RootNavigator from './src/navigation/RootNavigator';
+import { NavigationContainer } from '@react-navigation/native';
+import { AuthProvider } from './src/contexts/AuthContext';
+import { GestureHandlerRootView } from 'react-native-gesture-handler';
 
 const App = () => {
   return (
-    <Theme>
-      <SafeAreaView style={{ flex: 1 }}>
-        <RootNavigator/>
-      </SafeAreaView>
-    </Theme>
-  )
-}
-export default App
+    <GestureHandlerRootView>
+
+      <AuthProvider>
+        <NavigationContainer>
+          <RootNavigator />
+        </NavigationContainer>
+      </AuthProvider>
+    </GestureHandlerRootView>
+  );
+};
+export default App;
