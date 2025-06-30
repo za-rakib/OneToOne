@@ -2,10 +2,17 @@ import { StyleSheet, Text, View, TextInput, TouchableOpacity } from 'react-nativ
 import React, { useState } from 'react';
 import Theme from '../../Theme/Theme';
 import ClearButtonIcon from '../../Icon/ClearButtonIcon';
+import { useNavigation } from '@react-navigation/native';
+import { NativeStackNavigationProp } from '@react-navigation/native-stack';
+import {AuthStackParamList} from '../../navigation/types';
+
+
+type LoginScreenNavigationProp = NativeStackNavigationProp<AuthStackParamList, 'Login'>;
 
 const LoginScreen = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const navigation = useNavigation<LoginScreenNavigationProp>();
   return (
     <Theme>
       {/* =============header design================== */}
@@ -40,7 +47,7 @@ const LoginScreen = () => {
             />
           </View>
           {/* ===============LogInbtn===================== */}
-          <TouchableOpacity style={styles.loginBtn}>
+          <TouchableOpacity onPress={()=>navigation.navigate('otpandFace')} style={styles.loginBtn}>
             <Text style={styles.loginBtntxt}>Login</Text>
           </TouchableOpacity>
           <TouchableOpacity style={styles.forgetPasswapper}>
@@ -63,7 +70,7 @@ const styles = StyleSheet.create({
   secondartwapper: {
     height: 439,
     width: 486,
-    backgroundColor: 'rgba(0, 0, 0, 0.5)',
+    backgroundColor: 'rgba(10, 10, 10, 0.4)',
     borderRadius: 10,
   },
   headertxt: {

@@ -2,7 +2,7 @@
 import React, { ReactNode } from 'react';
 import { ImageBackground, StatusBar, StyleSheet, ImageSourcePropType } from 'react-native';
 
-const backgroundImage: ImageSourcePropType = require('../assets/images/image1.jpg');
+const backgroundImage: ImageSourcePropType = require('../assets/images/image2.jpg');
 
 interface ThemeProps {
   children: ReactNode;
