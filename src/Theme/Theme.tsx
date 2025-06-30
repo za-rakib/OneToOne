@@ -1,11 +1,6 @@
 // prettier-ignore
 import React, { ReactNode } from 'react';
-import {
-  ImageBackground,
-  StatusBar,
-  StyleSheet,
-  ImageSourcePropType,
-} from 'react-native';
+import { ImageBackground, StatusBar, StyleSheet, ImageSourcePropType } from 'react-native';
 
 const backgroundImage: ImageSourcePropType = require('../assets/images/image1.jpg');
 
@@ -15,11 +10,7 @@ interface ThemeProps {
 
 const Theme: React.FC<ThemeProps> = ({ children }) => {
   return (
-    <ImageBackground
-      source={backgroundImage}
-      style={styles.background}
-      blurRadius={100}
-    >
+    <ImageBackground source={backgroundImage} style={styles.background} blurRadius={100}>
       <StatusBar barStyle="dark-content" backgroundColor="#fff" />
       {children}
     </ImageBackground>

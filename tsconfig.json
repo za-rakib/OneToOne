@@ -1,12 +1,12 @@
 {
   "compilerOptions": {
-      "jsx": "react"
+    "jsx": "react"
   },
   "compilerOptions": {
-      "jsx": "react"
+    "jsx": "react"
   },
   "compilerOptions": {
-      "jsx": "react"
+    "jsx": "react"
   },
   "extends": "@react-native/typescript-config"
 }
