@@ -4,7 +4,7 @@ import React from 'react'
 const OtpandFaceScreen = () => {
   return (
     <View>
-      <Text>OtpandFaceScreen</Text>
+      <Text>OtpandFaceScrehlhljhkjhkjhkuen</Text>
     </View>
   )
 }
