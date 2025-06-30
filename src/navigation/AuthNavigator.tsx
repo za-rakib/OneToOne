@@ -1,7 +1,8 @@
-
+import React from 'react'; 
 import { AuthStackParamList } from './types';
 import LoginScreen from '../screen/Auth/LoginScreen';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
+
 const Stack = createNativeStackNavigator<AuthStackParamList>();
 
 const AuthNavigator = () => {
@@ -13,6 +14,7 @@ const AuthNavigator = () => {
       }}
     >
       <Stack.Screen name="Login" component={LoginScreen} />
+      
     </Stack.Navigator>
   );
 };
