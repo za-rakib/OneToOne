@@ -1,15 +1,18 @@
-import { View, Text, SafeAreaView, StatusBar, StyleSheet } from 'react-native'
-import React from 'react'
-import Login from './src/components/features/Login'
-import Theme from './src/Theme/Theme'
+import React from 'react';
+import RootNavigator from './src/navigation/RootNavigator';
+import { NavigationContainer } from '@react-navigation/native';
+import { AuthProvider } from './src/contexts/AuthContext';
+import { GestureHandlerRootView } from 'react-native-gesture-handler';
 
 const App = () => {
   return (
-    <Theme>
-      <SafeAreaView style={{ flex: 1 }}>
-        <Login />
-      </SafeAreaView>
-    </Theme>
-  )
-}
-export default App
+    <GestureHandlerRootView>
+      <AuthProvider>
+        <NavigationContainer>
+          <RootNavigator />
+        </NavigationContainer>
+      </AuthProvider>
+    </GestureHandlerRootView>
+  );
+};
+export default App;

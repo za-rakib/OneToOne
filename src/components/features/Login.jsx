@@ -1,12 +1,6 @@
 // src/components/Login.js
 import React from 'react';
-import {
-  View,
-  Text,
-  StyleSheet,
-  TextInput,
-  Pressable,
-} from 'react-native';
+import { View, Text, StyleSheet, TextInput, Pressable } from 'react-native';
 
 const Login = () => {
   return (
@@ -17,16 +11,16 @@ const Login = () => {
           Enter your email below to login to your account
         </Text>
 
-        <TextInput 
-          style={styles.input} 
-          placeholder="Email" 
-          placeholderTextColor="#aaa" 
+        <TextInput
+          style={styles.input}
+          placeholder="Email"
+          placeholderTextColor="#aaa"
         />
-        <TextInput 
-          style={styles.input} 
-          placeholder="Password" 
-          placeholderTextColor="#aaa" 
-          secureTextEntry 
+        <TextInput
+          style={styles.input}
+          placeholder="Password"
+          placeholderTextColor="#aaa"
+          secureTextEntry
         />
 
         <Pressable style={styles.button}>
