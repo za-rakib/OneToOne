@@ -7,15 +7,9 @@ const Login = () => {
     <View style={styles.container}>
       <View style={styles.overlay}>
         <Text style={styles.title}>Welcome to One to One</Text>
-        <Text style={styles.subtitle}>
-          Enter your email below to login to your account
-        </Text>
+        <Text style={styles.subtitle}>Enter your email below to login to your account</Text>
 
-        <TextInput
-          style={styles.input}
-          placeholder="Email"
-          placeholderTextColor="#aaa"
-        />
+        <TextInput style={styles.input} placeholder="Email" placeholderTextColor="#aaa" />
         <TextInput
           style={styles.input}
           placeholder="Password"
@@ -65,7 +59,7 @@ const styles = StyleSheet.create({
   input: {
     width: '100%',
     height: 50,
-    backgroundColor: 'rgba(255, 255, 255, 0.1)', 
+    backgroundColor: 'rgba(255, 255, 255, 0.1)',
     borderRadius: 10,
     paddingHorizontal: 16,
     color: '#fff',
