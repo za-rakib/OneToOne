@@ -1,7 +1,7 @@
 import { StyleSheet, Text, View, TextInput, TouchableOpacity } from 'react-native';
 import React, { useState } from 'react';
 import Theme from '../../Theme/Theme';
-import ClearButtonIcon from '../../Icon/ClearButtonIcon';
+import ClearButtonIcon from '../../assets/icons/ClearButtonIcon';
 
 const LoginScreen = () => {
   const [email, setEmail] = useState('');
