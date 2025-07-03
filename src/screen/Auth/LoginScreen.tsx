@@ -1,9 +1,14 @@
 import { StyleSheet, Text, View, TextInput, TouchableOpacity } from 'react-native';
 import React, { useState } from 'react';
 import Theme from '../../Theme/Theme';
-import ClearButtonIcon from '../../Icon/ClearButtonIcon';
 import { useDispatch } from 'react-redux';
 import { increment } from '../../redux/actions/counter.actions';
+import { useNavigation } from '@react-navigation/native';
+import { NativeStackNavigationProp } from '@react-navigation/native-stack';
+import { AuthStackParamList } from '../../navigation/types';
+import ClearButtonIcon from '../../assets/icons/ClearButtonIcon';
+
+type LoginScreenNavigationProp = NativeStackNavigationProp<AuthStackParamList, 'Login'>;
 
 const LoginScreen = () => {
   const [email, setEmail] = useState('');
@@ -14,6 +19,7 @@ const LoginScreen = () => {
     dispatch(increment())
   }
 
+  const navigation = useNavigation<LoginScreenNavigationProp>();
   return (
     <Theme>
       {/* =============header design================== */}
@@ -48,7 +54,13 @@ const LoginScreen = () => {
             />
           </View>
           {/* ===============LogInbtn===================== */}
-          <TouchableOpacity style={styles.loginBtn} onPress={increase}>
+          <TouchableOpacity
+            onPress={() => {
+              navigation.navigate('otpandFace')
+              increase()
+            }}
+            style={styles.loginBtn}
+          >
             <Text style={styles.loginBtntxt}>Login</Text>
           </TouchableOpacity>
           <TouchableOpacity style={styles.forgetPasswapper}>
@@ -71,7 +83,7 @@ const styles = StyleSheet.create({
   secondartwapper: {
     height: 439,
     width: 486,
-    backgroundColor: 'rgba(0, 0, 0, 0.5)',
+    backgroundColor: 'rgba(10, 10, 10, 0.4)',
     borderRadius: 10,
   },
   headertxt: {
