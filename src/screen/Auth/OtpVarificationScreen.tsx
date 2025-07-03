@@ -31,12 +31,14 @@ const OtpVarificationScreen: FC = () => {
             {[0, 1].map((item, index) => (
               <TextInput
                 key={item}
-                ref={ref => {input.current[index] = ref}}
+                ref={ref => {
+                  input.current[index] = ref;
+                }}
                 keyboardType="number-pad"
                 maxLength={1}
                 style={styles.otpinAll}
                 value={otp[index]}
-                onChangeText={(text) => handleOnchangeText(index, text)}
+                onChangeText={text => handleOnchangeText(index, text)}
               />
             ))}
             <Text style={styles.minustxt}>-</Text>
@@ -50,7 +52,7 @@ const OtpVarificationScreen: FC = () => {
                 maxLength={1}
                 style={styles.otpinAll}
                 value={otp[index + 2]}
-                onChangeText={(text) => handleOnchangeText(index + 2, text)}
+                onChangeText={text => handleOnchangeText(index + 2, text)}
               />
             ))}
           </View>
