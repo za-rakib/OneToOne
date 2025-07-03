@@ -1,6 +1,6 @@
 import React from 'react';
 import { AuthStackParamList } from './types';
-import LoginScreen from '../screen/Auth/LoginScreen';
+import LoginScreen from '../screen/Auth/Login/LoginScreen';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import OtpandFaceScreen from '../screen/Auth/OtpandFaceScreen';
 import OtpVarificationScreen from '../screen/Auth/OtpVarificationScreen';
