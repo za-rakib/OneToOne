@@ -9,6 +9,7 @@ export type AuthStackParamList = {
   Register: undefined;
   ForgotPassword: undefined;
   otpandFace: undefined;
+  otpScreen: undefined;
 };
 
 export type MainStackParamList = {
