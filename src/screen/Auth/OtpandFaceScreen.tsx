@@ -3,13 +3,21 @@ import React from 'react';
 import Theme from '../../Theme/Theme';
 import UserIcon from '../../Icon/UserIcon';
 import FaceIdIcon from '../../Icon/FaceIdIcon';
+import { NativeStackNavigationProp } from '@react-navigation/native-stack';
+import { AuthStackParamList } from '../../navigation/types';
+import { useNavigation } from '@react-navigation/native';
+
+
+type OtpandFaceScreenNavigationProp = NativeStackNavigationProp<AuthStackParamList,'otpandFace'>
 
 const OtpandFaceScreen = () => {
+
+  const navigation = useNavigation<OtpandFaceScreenNavigationProp>();
   return (
     <Theme>
       <View style={styles.mainContainerWrapper}>
         {/* ===========otp========== */}
-        <TouchableOpacity style={styles.otpContainer}>
+        <TouchableOpacity onPress={()=>navigation.navigate('otpScreen')} style={styles.otpContainer}>
           <Text style={styles.otpText}>OTP Verification</Text>
           <View style={styles.circle}>
             <UserIcon />

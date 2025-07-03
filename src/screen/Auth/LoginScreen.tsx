@@ -4,8 +4,7 @@ import Theme from '../../Theme/Theme';
 import ClearButtonIcon from '../../Icon/ClearButtonIcon';
 import { useNavigation } from '@react-navigation/native';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
-import {AuthStackParamList} from '../../navigation/types';
-
+import { AuthStackParamList } from '../../navigation/types';
 
 type LoginScreenNavigationProp = NativeStackNavigationProp<AuthStackParamList, 'Login'>;
 
@@ -47,7 +46,10 @@ const LoginScreen = () => {
             />
           </View>
           {/* ===============LogInbtn===================== */}
-          <TouchableOpacity onPress={()=>navigation.navigate('otpandFace')} style={styles.loginBtn}>
+          <TouchableOpacity
+            onPress={() => navigation.navigate('otpandFace')}
+            style={styles.loginBtn}
+          >
             <Text style={styles.loginBtntxt}>Login</Text>
           </TouchableOpacity>
           <TouchableOpacity style={styles.forgetPasswapper}>
