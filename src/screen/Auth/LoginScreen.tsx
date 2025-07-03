@@ -2,10 +2,18 @@ import { StyleSheet, Text, View, TextInput, TouchableOpacity } from 'react-nativ
 import React, { useState } from 'react';
 import Theme from '../../Theme/Theme';
 import ClearButtonIcon from '../../Icon/ClearButtonIcon';
+import { useDispatch } from 'react-redux';
+import { increment } from '../../redux/actions/counter.actions';
 
 const LoginScreen = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+
+  const dispatch = useDispatch()
+  const increase = ()=> {
+    dispatch(increment())
+  }
+
   return (
     <Theme>
       {/* =============header design================== */}
@@ -40,7 +48,7 @@ const LoginScreen = () => {
             />
           </View>
           {/* ===============LogInbtn===================== */}
-          <TouchableOpacity style={styles.loginBtn}>
+          <TouchableOpacity style={styles.loginBtn} onPress={increase}>
             <Text style={styles.loginBtntxt}>Login</Text>
           </TouchableOpacity>
           <TouchableOpacity style={styles.forgetPasswapper}>

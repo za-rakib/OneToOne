@@ -1,0 +1,11 @@
+const actionTypes = {
+    INCREMENT: 'INCREMENT',
+    DECREMENT: 'DECREMENT',
+    LOGIN: 'LOGIN',
+    LOGOUT: 'LOGOUT',
+    GET_POSTS: 'GET_POSTS',
+    GET_POSTS_SUCCESS: 'GET_POSTS_SUCCESS',
+    GET_POSTS_FAILURE: 'GET_POSTS_FAILURE',
+    ADD_POST: 'ADD_POST',}
+
+export default actionTypes
