@@ -1,5 +1,5 @@
 import { Text, View, TextInput, TouchableOpacity } from 'react-native';
-import React, { useState } from 'react';
+import React, { FC, useState } from 'react';
 import Theme from '../../../Theme/Theme';
 import { useDispatch } from 'react-redux';
 import { increment } from '../../../redux/actions/counter.actions';
@@ -12,7 +12,7 @@ import styles from './style';
 
 type LoginScreenNavigationProp = NativeStackNavigationProp<AuthStackParamList, 'Login'>;
 
-const LoginScreen = () => {
+const LoginScreen: FC = () => {
   const navigation = useNavigation<LoginScreenNavigationProp>();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -61,7 +61,8 @@ const LoginScreen = () => {
           <CustomExpandedButton
             title="Login"
             onPress={() => {
-              (navigation.navigate('otpandFace'), increase());
+              navigation.navigate('otpandFace');
+              increase();
             }}
             viewStyle={styles.loginButton}
             textStyle={styles.loginButtonText}
