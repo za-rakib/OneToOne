@@ -1,9 +1,5 @@
-
-import {create} from 'apisauce'
-
+import { create } from 'apisauce';
 
 export const api = create({
-    baseURL:"https://jsonplaceholder.typicode.com"
-})
-
-
+  baseURL: 'https://jsonplaceholder.typicode.com',
+});

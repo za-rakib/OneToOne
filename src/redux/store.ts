@@ -11,10 +11,10 @@ const createSagaMiddleware = require('redux-saga').default;
 const sagaMiddleware = createSagaMiddleware();
 
 // Configure the store
- const store = configureStore({
+const store = configureStore({
   reducer: rootReducer,
-  middleware: (getDefaultMiddleware) =>
-    getDefaultMiddleware({ thunk: false }).concat(sagaMiddleware, logger), 
+  middleware: getDefaultMiddleware =>
+    getDefaultMiddleware({ thunk: false }).concat(sagaMiddleware, logger),
 });
 
 // Run the root saga
@@ -23,4 +23,4 @@ sagaMiddleware.run(rootSaga);
 // Define RootState and AppDispatch types
 export type RootState = ReturnType<typeof store.getState>;
 export type AppDispatch = typeof store.dispatch;
-export default store
+export default store;

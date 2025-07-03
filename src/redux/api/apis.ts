@@ -1,4 +1,3 @@
-const getPosts = '/posts'
+const getPosts = '/posts';
 
-export {
-    getPosts}
+export { getPosts };

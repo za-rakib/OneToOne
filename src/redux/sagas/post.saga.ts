@@ -10,20 +10,20 @@ interface Post {
   body: string;
 }
 
-interface Action<T = any> {
-  type: string;
-  payload?: T;
-}
+// interface Action<T = any> {
+//   type: string;
+//   payload?: T;
+// }
 
 // Mock API calls
 const fetchPostsApi = async (): Promise<Post[]> => {
   return getPostsList()
-    .then((response:any) => {
-     const post = response
-      console.log("posts",response)
-    return post
-    } )
-    .catch((error) => {
+    .then((response: any) => {
+      const post = response;
+      console.log('posts', response);
+      return post;
+    })
+    .catch(error => {
       throw error;
     });
 };

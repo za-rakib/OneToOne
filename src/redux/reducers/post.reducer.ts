@@ -1,6 +1,4 @@
-
 import actionTypes from '../constants/actionTypes';
-
 
 const initialState = {
   posts: [],
@@ -8,7 +6,7 @@ const initialState = {
   error: null,
 };
 
-const postsReducer = (state = initialState, action: { type: any; payload: any; }) => {
+const postsReducer = (state = initialState, action: { type: any; payload: any }) => {
   switch (action.type) {
     case actionTypes.GET_POSTS:
       return { ...state, loading: true, error: null };
