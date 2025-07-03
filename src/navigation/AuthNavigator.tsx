@@ -16,7 +16,6 @@ const AuthNavigator = () => {
     >
       <Stack.Screen name="Login" component={LoginScreen} />
       <Stack.Screen name="otpandFace" component={OtpandFaceScreen} />
-
     </Stack.Navigator>
   );
 };
